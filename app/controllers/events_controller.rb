@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 class EventsController < ApplicationController
-	before_action :authenticate, expect: :index
+	before_action :authenticate, expect: :show
 
-	def index
-		@events = Events.all
+	def show
+		@event = Event.find(params[:id])
 	end
 
 	def new
