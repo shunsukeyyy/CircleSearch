@@ -43,6 +43,9 @@ gem 'omniauth-twitter', '~> 1.0.1'
 
 gem 'execjs'
 
+#開発を効率化するgem
 gem 'pry-rails', group: [:development, :test]
 gem 'pry-byebug', group: [:development, :test]
+gem 'hirb', group: [:development, :test]
+gem 'hirb-unicode', group: [:development, :test]
 
