@@ -44,4 +44,5 @@ gem 'omniauth-twitter', '~> 1.0.1'
 gem 'execjs'
 
 gem 'pry-rails', group: [:development, :test]
+gem 'pry-byebug', group: [:development, :test]
 
