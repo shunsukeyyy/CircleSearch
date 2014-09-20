@@ -48,4 +48,6 @@ gem 'pry-rails', group: [:development, :test]
 gem 'pry-byebug', group: [:development, :test]
 gem 'hirb', group: [:development, :test]
 gem 'hirb-unicode', group: [:development, :test]
+gem 'better_errors', group: [:development, :test]
+gem 'binding_of_caller', group: [:development, :test]
 
