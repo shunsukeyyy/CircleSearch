@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20140916130150) do
     t.datetime "updated_at"
   end
 
-  add_index "events", ["owner_id"], name: "index_events_on_owner_id"
+  add_index "events", ["owner_id"], name: "index_events_on_owner_id", using: :btree
 
   create_table "tickets", force: true do |t|
     t.integer  "user_id"
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 20140916130150) do
     t.datetime "updated_at"
   end
 
-  add_index "tickets", ["event_id", "user_id"], name: "index_tickets_on_event_id_and_user_id", unique: true
-  add_index "tickets", ["user_id", "event_id"], name: "index_tickets_on_user_id_and_event_id", unique: true
+  add_index "tickets", ["event_id", "user_id"], name: "index_tickets_on_event_id_and_user_id", unique: true, using: :btree
+  add_index "tickets", ["user_id", "event_id"], name: "index_tickets_on_user_id_and_event_id", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "provider",   null: false
@@ -46,6 +46,6 @@ ActiveRecord::Schema.define(version: 20140916130150) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true
+  add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true, using: :btree
 
 end
